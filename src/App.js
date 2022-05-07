@@ -20,6 +20,7 @@ import { history } from "./helpers/history";
 // import AuthVerify from "./common/AuthVerify";
 import EventBus from "./common/EventBus";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import jwt from "jwt-decode";
 
 const App = () => {
   const [showModeratorBoard, setShowModeratorBoard] = useState(false);
@@ -27,6 +28,10 @@ const App = () => {
 
   const { user: currentUser } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+
+  
+
+  
 
   useEffect(() => {
     history.listen((location) => {
@@ -40,8 +45,9 @@ const App = () => {
 
   useEffect(() => {
     if (currentUser) {
-      setShowModeratorBoard(currentUser.roles.includes("ROLE_MODERATOR"));
-      setShowAdminBoard(currentUser.roles.includes("ROLE_ADMIN"));
+      var decoded = jwt(currentUser.accessToken);
+     //setShowModeratorBoard(currentUser.roles.includes("ROLE_Create-users-sys"));
+      setShowAdminBoard(decoded.role.includes("ROLE_Create-users-sys"));
     } else {
       setShowModeratorBoard(false);
       setShowAdminBoard(false);
