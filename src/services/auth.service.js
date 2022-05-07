@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:9091/saamfiapi/public/institutions/1/systems/11/users/";
+const API_URL = "https://pi2sis.icesi.edu.co/saamfiapi/public/institutions/1/systems/10/users/";
 
 const register = (username, email, password) => {
   return axios.post(API_URL + "signup", {
