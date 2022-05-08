@@ -9,8 +9,8 @@ import Login from "../components/Login/Login";
 import Register from "../components/Login/Register";
 import Profile from "../components/Login/Profile";
 import MainView from "../views/MainView";
+import PatientsView from "../views/PatientsView";
 import BoardModerator from "../components/Login/BoardModerator";
-import BoardAdmin from "../components/Login/BoardAdmin";
 import { BsHeartFill } from "react-icons/bs";
 import { logout } from "../actions/auth";
 import { clearMessage } from "../actions/message";
@@ -28,10 +28,6 @@ function Routing (){
 
   const { user: currentUser } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
-
-
-
-
 
   useEffect(() => {
     history.listen((location) => {
@@ -145,8 +141,9 @@ function Routing (){
             <Route exact path="/register" component={Register} />
             <Route exact path="/profile" component={Profile} />
             <Route path="/crue/menu" component={MainView} />
+            <Route path="/crue/patients" component={PatientsView} />
             <Route path="/mod" component={BoardModerator} />
-            <Route path="/crue/patients" component={BoardAdmin} />
+            
           </Switch>
         </div>
 

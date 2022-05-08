@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.contenedor-externo {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-direction: row;
+}
+
+.registro-paciente {
+
+    display: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-color: rgb(52, 117, 111);
+
+}
+
+.registrar {
+    font-family: Lato;
+    text-size-adjust: 20px;
+    font-size: 20px;
+}
+
+.information {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-container;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: rgb(82, 87, 92) 2px solid;
+}
+
+.diagnosticos {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-container;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.bttn-save-cancel {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+
+}

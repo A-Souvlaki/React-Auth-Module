@@ -1,0 +1,7 @@
+.MuiTextField-root fieldset{
+    border-color: rgb(52, 117, 111);
+}
+
+.MuiTextField-root:hover fieldset{
+    border-color: rgb(52, 117, 111);
+}

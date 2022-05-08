@@ -19,12 +19,15 @@ export default function DashboardProvider({ children }) {
   const [dataItems, setDataItems] = useState([]);
   
 
-  const configurated = {
-    headers: { Authorization: `Bearer ${currentUser.accessToken}`}
-  };
+  
 
   const getDataSeccions = async () => {
     try {
+
+      const configurated = {
+        headers: { Authorization: `Bearer ${currentUser.accessToken}`}
+      };
+
       setIsSearching(true);
       setError();
       setResults([]);
@@ -45,6 +48,10 @@ export default function DashboardProvider({ children }) {
       setError();
       setResults([])
 
+      const configurated = {
+        headers: { Authorization: `Bearer ${currentUser.accessToken}`}
+      };
+
       await apiCall.post(`/add-section`, item, configurated).then((event) => window.location.reload(true));
 
 
@@ -62,6 +69,10 @@ export default function DashboardProvider({ children }) {
       setError();
       setDataItems([]);
 
+      const configurated = {
+        headers: { Authorization: `Bearer ${currentUser.accessToken}`}
+      };
+
       const { data } = await apiCall.get(`/get-all-dataitems`, configurated);
 
       setDataItems(data);
@@ -77,6 +88,10 @@ export default function DashboardProvider({ children }) {
       setIsSearchingDataItems(true);
       setError();
       setDataItems([]);
+
+      const configurated = {
+        headers: { Authorization: `Bearer ${currentUser.accessToken}`}
+      };
 
       await apiCall.post(`/add-dataitem`, item, configurated).then((event) => window.location.reload(true));
 

@@ -36,7 +36,7 @@ function DashboardContainer (props)  {
 
     const configurated = {
         headers: { Authorization: `Bearer ${currentUser.accessToken}` },
-        responseType: "json"
+        responseType: "blob"
     };
 
     const {

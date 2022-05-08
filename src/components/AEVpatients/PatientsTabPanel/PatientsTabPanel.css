@@ -1,0 +1,20 @@
+.conten{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-container;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.tabP-content{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-direction: row;
+}
+
+.textArea{
+    marginTop: 0px, 
+    height 200px,
+    border-color rgb(51, 108, 251);
+
+}
